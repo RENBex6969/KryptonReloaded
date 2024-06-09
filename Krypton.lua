@@ -1053,3 +1053,10 @@ if _G.Protection == true then
   else
     warn("> Krypton | Protection - Negative")
 end
+
+--[] IgnoreWarn
+if _G.IgnoreWarn == false then
+  warn("> Krypton logs your ip (for now)")
+  else
+    print("> IgnoreWarn - Postive")
+end
