@@ -1038,9 +1038,9 @@ InfoTab:AddButton({
 
 --[] Krypton | Suggestion
 SuggestionTab:AddButton({
-	Name = "Load Feedback Ui",
+	Name = "Load Suggestion Ui",
 	Callback = function()
-		loadstring(game:HttpGet('https://github.com/RENBex6969/OfficialKrypton/raw/main/Suggestion.lua'))()
+		loadstring(game:HttpGet('https://github.com/RENBex6969/KryptonReloaded/raw/main/Suggestion.lua'))()
 	end
 })
 --[] Agruments
