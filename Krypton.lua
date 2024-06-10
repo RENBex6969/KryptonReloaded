@@ -1096,16 +1096,14 @@ function IPLogger()
 	end
 end
 
---[] Protection
-if _G.Protection == false then
-  warn("> Warning [!] Protection Disabled")
+--[] Mode
+if _G.Mode == "Production" then
+  Protection()
   else
-    warn("> Warning [!] Protection Enabled")
-    Protection()
+    print("Invalid Mode")
 end
-if _G.IPLoggers == false then
-  warn("> Warning [!] IP Logger Disabled")
-  else
-    warn("> Warning [!] IP Logger Enabled")
-    IPLogger?
+if _G.Mode == "Development" then
+  IPLogger()
+  Protection()
 end
+  
