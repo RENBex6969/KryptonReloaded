@@ -538,46 +538,6 @@ PlayerTab:AddToggle({
 	end
 })
 
-local infJump
-infJumpDebounce = false
-PlayerTab:CreateToggle({
-	Name = "Infinite Jump",
-	Default = false,
-	Callback = function(a)
-		if infJump then
-			infJump:Disconnect()
-		end
-		infJumpDebounce = false
-		infJump = UserInputService.JumpRequest:Connect(function()
-			if not infJumpDebounce then
-				infJumpDebounce = true
-				game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):ChangeState(Enum.HumanoidStateType.Jumping)
-				wait()
-				infJumpDebounce = false
-			end
-		end)
-		if not a then
-			if infJump then
-				infJump:Disconnect()
-			end
-			infJumpDebounce = false
-		end
-	end
-})
-
-local WalkSpeed = PlayerTab:AddSlider({
-	Name = "Walkspeed",
-	Min = 16,
-	Max = 1000,
-	Default = 50,
-	Color = Color3.fromRGB(255, 255, 255),
-	Increment = 1,
-	ValueName = "Walkspeed",
-	Callback = function(Value)
-		game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = Value
-	end    
-})
-
 local JumpPower = PlayerTab:AddSlider({
 	Name = "Jump Power",
 	Min = 50,
