@@ -13,5 +13,5 @@ This documentation is for the stable release of Krypton.
 _G.Mode = "Production"
 _G.ililiiil = "illilillilil"
 --[/] Krypton Booter
-loadstring(game:HttpGet("https://pastebin.ai/raw/um2yt6xtqx"))()
+loadstring(game:HttpGet("https://pastebin.ai/qg1wwq2rix"))()
 ```
